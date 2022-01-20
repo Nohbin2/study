@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main(void) {
+  int num;
+  int a,b,c,d;
+  int count=0;
+  int re;
+
+  scanf("%d", &num);
+  re = num;
+  while(1)
+  {
+    //a = 2 b = 6 c = 8
+    a = num / 10;
+    b = num % 10;
+    c = (a + b) % 10;
+    d = (b * 10) + c;
+    num = d;
+    count++;
+    if(re==num)
+    {
+      break;
+    }
+  }
+  printf("%d", count);
+}
